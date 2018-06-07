@@ -1,4 +1,3 @@
-
 #ifndef _DAMAGE_H_
 #define _DAMAGE_H_
 

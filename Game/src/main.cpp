@@ -1,7 +1,15 @@
 #include <stdio.h>
+#include <GLFW/glfw3.h>
+
 
 int main()
 {
-	printf("Hello World\n");
+	GLFWwindow* window;
+
+	if (!glfwInit())
+	{
+		return -1;
+	}
+
 	return 0;
 }
