@@ -1,19 +1,24 @@
 #include "common.h"
 #include "damage.h"
 #include "window.h"
-
+#include "vector.h"
+#include "file.h"
 
 
 using namespace dmg;
 using namespace graphics;
+using namespace math;
 
-
-#define RGBA_COLORED 0.75f, 0.75f, 0.75f, 1.0f
 
 int main()
 {
 	Window window("MyTitle", 800, 600);
-	glClearColor(RGBA_COLORED);
+	glClearColor(0.75f, 0.75f, 0.75f, 1.0f);
+
+#if 0
+    const char* testfile = read_file("damage.cpp");
+    printf("%s", testfile);
+#endif
 
     GLuint vao;
     glGenVertexArrays(1, &vao);

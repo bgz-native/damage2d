@@ -28,6 +28,12 @@
     <ClInclude Include="vector.h">
       <Filter>math</Filter>
     </ClInclude>
+    <ClInclude Include="file.h">
+      <Filter>dmg</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="window.cpp">
@@ -44,6 +50,9 @@
     </ClCompile>
     <ClCompile Include="vector3.cpp">
       <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="shader.cpp">
+      <Filter>graphics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
