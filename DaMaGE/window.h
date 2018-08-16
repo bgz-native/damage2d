@@ -1,8 +1,10 @@
 #ifndef _WINDOW_H_
 #define _WINDOW_H_
 
-#include <GLFW/glfw3.h>
 #include "common.h"
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+
 
 namespace dmg
 {

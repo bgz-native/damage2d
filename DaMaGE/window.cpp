@@ -16,7 +16,7 @@ namespace dmg
 			if (start() == -1)
 			{
 				glfwTerminate();
-			}			
+			}
 		}
 
 		Window::~Window()
@@ -28,7 +28,7 @@ namespace dmg
 		{
 			if (!glfwInit())
 			{
-				printf("Init Error");
+				printf("GLFW Init Error");
 				return -1;
 			}
 
@@ -44,6 +44,15 @@ namespace dmg
 			glfwSetWindowSizeCallback(m_window, windowResize);
 
 
+
+            // context must be created before initializing glew
+            if (glewInit() != GLEW_OK)
+            {
+                printf("Failed GLEW Init");
+                return -1;
+            }
+
+            printf("OpenGL %s", glGetString(GL_VERSION));
 			return 0;
 
 		}
