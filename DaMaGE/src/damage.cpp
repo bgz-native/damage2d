@@ -2,7 +2,7 @@
 #include "damage.h"
 #include "window.h"
 #include "vector.h"
-#include "file.h"
+#include "shader.h"
 
 
 using namespace dmg;
@@ -28,10 +28,11 @@ int main()
 	while (window.isRunning())
 	{
         window.clear();
-#if 0
+
+#if 1
         if (window.isKeyPressed(GLFW_KEY_A))
         {
-            printf("A pressed");
+            printf("A pressed\n");
         }
 
         if (window.isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT))
@@ -42,9 +43,9 @@ int main()
         double x, y;
         window.getMousePosition(x, y);
         printf("xPos: %f , yPos: %f\n", x, y);
+#endif
 
-
-
+#if 0
         glBegin(GL_TRIANGLES);
         glVertex2f(-0.5f, -0.5f);
         glVertex2f(0, 0.5f);

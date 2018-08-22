@@ -76,7 +76,6 @@ namespace dmg { namespace graphics {
         glfwSetWindowUserPointer(m_Window, this);
 
 		glfwSetWindowSizeCallback(m_Window, window_resize);
-
         glfwSetKeyCallback(m_Window, key_callback);
         glfwSetMouseButtonCallback(m_Window, mouse_button_callback);
         glfwSetCursorPosCallback(m_Window, cursor_position_callback);
@@ -91,7 +90,6 @@ namespace dmg { namespace graphics {
         printf("OpenGL %s\n", glGetString(GL_VERSION));
 
 		return 0;
-
 	}
 
 	void Window::update()

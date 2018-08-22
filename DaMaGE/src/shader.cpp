@@ -30,8 +30,8 @@ namespace dmg { namespace graphics {
         GLuint vertex = glCreateShader(GL_VERTEX_SHADER);
         GLuint fragment = glCreateShader(GL_FRAGMENT_SHADER);
 
-        const char* vertSource = read_file(m_VertPath);
-        const char* fragSource = read_file(m_FragPath);
+        const char* vertSource = util::read_file(m_VertPath);
+        const char* fragSource = util::read_file(m_FragPath);
 
         glShaderSource(vertex, 1, &vertSource, NULL);
         glShaderSource(fragment, 1, &fragSource, NULL);
