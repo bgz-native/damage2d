@@ -67,6 +67,10 @@ namespace dmg { namespace math {
         float       x, y, z;
     };
 
+
+#define DMG_VEC2 dmg::math::vector2
+#define DMG_VEC3 dmg::math::vector3
+
 #ifndef M_PI
 #define M_PI 3.14159265358979323846f
 #endif

@@ -21,31 +21,19 @@ namespace dmg { namespace math {
         memcpy(&m[0][0], &p_m.m[0][0], sizeof(float) * 16); 
     }
 
-    float* matrix4x4::get()
+    const float* matrix4x4::getElements() const
     {
         return m[0];
-    }
-
-    float * matrix4x4::getLinear()
-    {
-        mat[0] = m[0][0]; mat[1] = m[0][1]; mat[2] = m[0][2]; mat[3] = m[0][3];
-        mat[4] = m[1][0]; mat[5] = m[1][1]; mat[6] = m[1][2]; mat[7] = m[1][3];
-        mat[8] = m[2][0]; mat[9] = m[2][1]; mat[10] = m[2][2]; mat[11] = m[2][3];
-        mat[12] = m[3][0]; mat[13] = m[3][1]; mat[14] = m[3][2]; mat[15] = m[3][3];
-
-        return mat;
     }
 
     void matrix4x4::identity()
     {
         memset(m, 0, sizeof(m));
         m[0][0] = m[1][1] = m[2][2] = m[3][3] = 1.0f;
-
     }
 
-    matrix4x4 matrix4x4::transposed() const
+    matrix4x4 matrix4x4::getTranspose() const
     {
-        // TODO refactor in future so that applies to member matrix
         matrix4x4 t;
 
         t.m[0][0] = m[0][0]; t.m[1][0] = m[0][1]; t.m[2][0] = m[0][2]; t.m[3][0] = m[0][3];
@@ -56,9 +44,8 @@ namespace dmg { namespace math {
         return t;
     }
 
-    matrix4x4 matrix4x4::inversed()
+    matrix4x4 matrix4x4::getInverse() const
     {
-        // TODO refactor in future so that applies to member matrix
         matrix4x4 rm;
 
         float dm = determinant();
@@ -192,14 +179,12 @@ namespace dmg { namespace math {
         return rm;
     }
 
-    const float matrix4x4::determinant()
+    const float matrix4x4::determinant() const
     {
-        float d =   m[0][0] * ( m[1][1] * ((m[2][2] * m[3][3]) - (m[2][3] * m[3][2])) + m[1][2] * ((m[2][3] * m[3][1]) - (m[2][1] * m[3][3])) + m[1][3] * ((m[2][1] * m[3][2]) - (m[2][2] * m[3][1])))
-                  - m[0][1] * ( m[1][0] * ((m[2][2] * m[3][3]) - (m[2][3] * m[3][2])) + m[1][2] * ((m[2][3] * m[3][0]) - (m[2][0] * m[3][3])) + m[1][3] * ((m[2][0] * m[3][2]) - (m[2][2] * m[3][0])))
-                  + m[0][2] * ( m[1][0] * ((m[2][1] * m[3][3]) - (m[2][3] * m[3][1])) + m[1][1] * ((m[2][3] * m[3][0]) - (m[2][0] * m[3][3])) + m[1][3] * ((m[2][0] * m[3][1]) - (m[2][1] * m[3][0])))
-                  - m[0][3] * ( m[1][0] * ((m[2][1] * m[3][2]) - (m[2][2] * m[3][1])) + m[1][1] * ((m[2][2] * m[3][0]) - (m[2][0] * m[3][2])) + m[1][2] * ((m[2][0] * m[3][1]) - (m[2][1] * m[3][0])));
-
-        return d;
+        return  m[0][0] * ( m[1][1] * ((m[2][2] * m[3][3]) - (m[2][3] * m[3][2])) + m[1][2] * ((m[2][3] * m[3][1]) - (m[2][1] * m[3][3])) + m[1][3] * ((m[2][1] * m[3][2]) - (m[2][2] * m[3][1])))
+              - m[0][1] * ( m[1][0] * ((m[2][2] * m[3][3]) - (m[2][3] * m[3][2])) + m[1][2] * ((m[2][3] * m[3][0]) - (m[2][0] * m[3][3])) + m[1][3] * ((m[2][0] * m[3][2]) - (m[2][2] * m[3][0])))
+              + m[0][2] * ( m[1][0] * ((m[2][1] * m[3][3]) - (m[2][3] * m[3][1])) + m[1][1] * ((m[2][3] * m[3][0]) - (m[2][0] * m[3][3])) + m[1][3] * ((m[2][0] * m[3][1]) - (m[2][1] * m[3][0])))
+              - m[0][3] * ( m[1][0] * ((m[2][1] * m[3][2]) - (m[2][2] * m[3][1])) + m[1][1] * ((m[2][2] * m[3][0]) - (m[2][0] * m[3][2])) + m[1][2] * ((m[2][0] * m[3][1]) - (m[2][1] * m[3][0])));
     }
 
 

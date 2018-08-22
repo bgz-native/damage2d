@@ -17,15 +17,14 @@ namespace dmg { namespace math {
                   float m30, float m31, float m32, float m33);
 
         matrix4x4(const matrix4x4& m);
-        float*      get();
-        float*      getLinear();
+        const float*      getElements() const;
 
         void        identity();
 
-        matrix4x4   transposed() const; 
-        matrix4x4   inversed(); const
+        matrix4x4   getTranspose() const; 
+        matrix4x4   getInverse() const;
 
-        float       determinant();
+        const float determinant() const;
         vector3     operator*(const vector3& v);
         matrix4x4   operator*(float scalar) const;
     
@@ -54,15 +53,22 @@ namespace dmg { namespace math {
                                           float p_near, 
                                           float p_far);
 
+        // TODO check if this function is working
         void        createCameraView(const vector3& p_position, 
                                      const vector3& p_direction, 
                                      const vector3& p_upVector);
+
+        //TODO matrix handling local and world coord AKA attaching to parent
+        //TODO matrix handle for EulerAngles rotation
+        //TODO matrix handle for Quaternions
 
     public:
         float       m[4][4];
         float       mat[16];
 
     };
+
+#define DMG_MAT4 dmg::math::matrix4x4
 
 } }
 
