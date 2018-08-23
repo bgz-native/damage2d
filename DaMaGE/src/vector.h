@@ -99,9 +99,10 @@ namespace dmg { namespace math {
     };
 
 
-
 #define DMG_VEC2 dmg::math::vector2
 #define DMG_VEC3 dmg::math::vector3
+#define DMG_VEC4 dmg::math::vector4
+
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846f
