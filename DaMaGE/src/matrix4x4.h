@@ -48,10 +48,14 @@ namespace dmg { namespace math {
         vector3     getTranslate();
         vector3     getScale();
 
-        matrix4x4   projectionPerspective(float p_fov, 
-                                          float p_aspectRatio, 
-                                          float p_near, 
-                                          float p_far);
+        matrix4x4   getProjectionPerspective(float p_fov, 
+                                             float p_aspectRatio, 
+                                             float p_near, 
+                                             float p_far);
+
+        matrix4x4   getProjectionOrthographic(float p_left,   float p_right, 
+                                              float p_bottom, float p_top, 
+                                              float p_near,   float p_far);
 
         // TODO check if this function is working
         void        createCameraView(const vector3& p_position, 

@@ -59,35 +59,35 @@ namespace dmg { namespace math {
                             m[2][1] * m[1][2] * m[3][3] +
                             m[2][1] * m[1][3] * m[3][2] +
                             m[3][1] * m[1][2] * m[2][3] -
-                            m[3][1] * m[1][3] * m[2][2];
+                            m[3][1] * m[1][3] * m[2][2] ;
 
             rm.m[1][0] =   -m[1][0] * m[2][2] * m[3][3] +
                             m[1][0] * m[2][3] * m[3][2] +
                             m[2][0] * m[1][2] * m[3][3] -
                             m[2][0] * m[1][3] * m[3][2] -
                             m[3][0] * m[1][2] * m[2][3] +
-                            m[3][0] * m[1][3] * m[2][2];
+                            m[3][0] * m[1][3] * m[2][2] ;
 
             rm.m[2][0] =    m[1][0] * m[2][1] * m[3][3] -
                             m[1][0] * m[2][3] * m[3][1] -
                             m[2][0] * m[1][1] * m[3][3] +
                             m[2][0] * m[1][3] * m[3][1] +
                             m[3][0] * m[1][1] * m[2][3] -
-                            m[3][0] * m[1][3] * m[2][1];
+                            m[3][0] * m[1][3] * m[2][1] ;
 
             rm.m[3][0] =   -m[1][0] * m[2][1] * m[3][2] +
                             m[1][0] * m[2][2] * m[3][1] +
                             m[2][0] * m[1][1] * m[3][2] -
                             m[2][0] * m[1][2] * m[3][1] -
                             m[3][0] * m[1][1] * m[2][2] +
-                            m[3][0] * m[1][2] * m[2][1];
+                            m[3][0] * m[1][2] * m[2][1] ;
 
             rm.m[0][1] =   -m[0][1] * m[2][2] * m[3][3] +
                             m[0][1] * m[2][3] * m[3][2] +
                             m[2][1] * m[0][2] * m[3][3] -
                             m[2][1] * m[0][3] * m[3][2] -
                             m[3][1] * m[0][2] * m[2][3] +
-                            m[3][1] * m[0][3] * m[2][2];
+                            m[3][1] * m[0][3] * m[2][2] ;
 
             rm.m[1][1] =    m[0][0] * m[2][2] * m[3][3] -
                             m[0][0] * m[2][3] * m[3][2] -
@@ -101,70 +101,70 @@ namespace dmg { namespace math {
                             m[2][0] * m[0][1] * m[3][3] -
                             m[2][0] * m[0][3] * m[3][1] -
                             m[3][0] * m[0][1] * m[2][3] +
-                            m[3][0] * m[0][3] * m[2][1];
+                            m[3][0] * m[0][3] * m[2][1] ;
 
             rm.m[3][1] =    m[0][0] * m[2][1] * m[3][2] -
                             m[0][0] * m[2][2] * m[3][1] -
                             m[2][0] * m[0][1] * m[3][2] +
                             m[2][0] * m[0][2] * m[3][1] +
                             m[3][0] * m[0][1] * m[2][2] -
-                            m[3][0] * m[0][2] * m[2][1];
+                            m[3][0] * m[0][2] * m[2][1] ;
 
             rm.m[0][2] =    m[0][1] * m[1][2] * m[3][3] -
                             m[0][1] * m[1][3] * m[3][2] -
                             m[1][1] * m[0][2] * m[3][3] +
                             m[1][1] * m[0][3] * m[3][2] +
                             m[3][1] * m[0][2] * m[1][3] -
-                            m[3][1] * m[0][3] * m[1][2];
+                            m[3][1] * m[0][3] * m[1][2] ;
 
             rm.m[1][2] =   -m[0][0] * m[1][2] * m[3][3] +
                             m[0][0] * m[1][3] * m[3][2] +
                             m[1][0] * m[0][2] * m[3][3] -
                             m[1][0] * m[0][3] * m[3][2] -
                             m[3][0] * m[0][2] * m[1][3] +
-                            m[3][0] * m[0][3] * m[1][2];
+                            m[3][0] * m[0][3] * m[1][2] ;
 
             rm.m[2][2] =    m[0][0] * m[1][1] * m[3][3] -
                             m[0][0] * m[1][3] * m[3][1] -
                             m[1][0] * m[0][1] * m[3][3] +
                             m[1][0] * m[0][3] * m[3][1] +
                             m[3][0] * m[0][1] * m[1][3] -
-                            m[3][0] * m[0][3] * m[1][1];
+                            m[3][0] * m[0][3] * m[1][1] ;
 
             rm.m[3][2] =   -m[0][0] * m[1][1] * m[3][2] +
                             m[0][0] * m[1][2] * m[3][1] +
                             m[1][0] * m[0][1] * m[3][2] -
                             m[1][0] * m[0][2] * m[3][1] -
                             m[3][0] * m[0][1] * m[1][2] +
-                            m[3][0] * m[0][2] * m[1][1];
+                            m[3][0] * m[0][2] * m[1][1] ;
 
             rm.m[0][3] =   -m[0][1] * m[1][2] * m[2][3] +
                             m[0][1] * m[1][3] * m[2][2] +
                             m[1][1] * m[0][2] * m[2][3] -
                             m[1][1] * m[0][3] * m[2][2] -
                             m[2][1] * m[0][2] * m[1][3] +
-                            m[2][1] * m[0][3] * m[1][2];
+                            m[2][1] * m[0][3] * m[1][2] ;
 
             rm.m[1][3] =    m[0][0] * m[1][2] * m[2][3] -
                             m[0][0] * m[1][3] * m[2][2] -
                             m[1][0] * m[0][2] * m[2][3] +
                             m[1][0] * m[0][3] * m[2][2] +
                             m[2][0] * m[0][2] * m[1][3] -
-                            m[2][0] * m[0][3] * m[1][2];
+                            m[2][0] * m[0][3] * m[1][2] ;
 
             rm.m[2][3] =   -m[0][0] * m[1][1] * m[2][3] +
                             m[0][0] * m[1][3] * m[2][1] +
                             m[1][0] * m[0][1] * m[2][3] -
                             m[1][0] * m[0][3] * m[2][1] -
                             m[2][0] * m[0][1] * m[1][3] +
-                            m[2][0] * m[0][3] * m[1][1];
+                            m[2][0] * m[0][3] * m[1][1] ;
 
             rm.m[3][3] =    m[0][0] * m[1][1] * m[2][2] -
                             m[0][0] * m[1][2] * m[2][1] -
                             m[1][0] * m[0][1] * m[2][2] +
                             m[1][0] * m[0][2] * m[2][1] +
                             m[2][0] * m[0][1] * m[1][2] -
-                            m[2][0] * m[0][2] * m[1][1];
+                            m[2][0] * m[0][2] * m[1][1] ;
 
             for (int row = 0; row < 4; row++)
             {
@@ -190,50 +190,50 @@ namespace dmg { namespace math {
 
     vector3 matrix4x4::operator*(const vector3 & v)
     {
-        vector3 rv;
+        vector3 result;
     
         float vw = 1.0f;
 
-        rv.x = (m[0][0] * v.x) + (m[0][1] * v.y) + (m[0][2] * v.z) + (m[0][3] * vw);
-        rv.y = (m[1][0] * v.x) + (m[1][1] * v.y) + (m[1][2] * v.z) + (m[1][3] * vw);
-        rv.z = (m[2][0] * v.x) + (m[2][1] * v.y) + (m[2][2] * v.z) + (m[2][3] * vw);
+        result.x = (m[0][0] * v.x) + (m[0][1] * v.y) + (m[0][2] * v.z) + (m[0][3] * vw);
+        result.y = (m[1][0] * v.x) + (m[1][1] * v.y) + (m[1][2] * v.z) + (m[1][3] * vw);
+        result.z = (m[2][0] * v.x) + (m[2][1] * v.y) + (m[2][2] * v.z) + (m[2][3] * vw);
         //rv.w = 1;
 
-        return rv;
+        return result;
     }
 
 
     matrix4x4 matrix4x4::operator*(float scalar) const
     {
-        matrix4x4 s;
+        matrix4x4 result;
 
         for (int row = 0; row < 4; row++)
         {
             for (int column = 0; column < 4; column++)
             {
-                s.m[row][column] = m[row][column] * scalar;
+                result.m[row][column] = m[row][column] * scalar;
             }
         }
 
-        return s;
+        return result;
     }
 
     matrix4x4 matrix4x4::operator*(const matrix4x4 p_m) const
     {
-        matrix4x4 rm;
+        matrix4x4 result;
 
         for (int row = 0; row < 4; row++) 
         {
             for (int column = 0; column < 4; column++)
             {
-                rm.m[row][column] = (m[row][0] * p_m.m[0][column]) + 
+                result.m[row][column] = (m[row][0] * p_m.m[0][column]) + 
                                     (m[row][1] * p_m.m[1][column]) +
                                     (m[row][2] * p_m.m[2][column]) +
                                     (m[row][3] * p_m.m[3][column]);
             }
         }
 
-        return rm;
+        return result;
     }
 
     void matrix4x4::setTranslate(vector3 & vecPos)
@@ -299,25 +299,43 @@ namespace dmg { namespace math {
         return vector3(m[0][0], m[1][1], m[2][2]);
     }
 
-    matrix4x4 matrix4x4::projectionPerspective(float p_fov, float p_aspectRatio, float p_near, float p_far)
+    matrix4x4 matrix4x4::getProjectionPerspective(float p_fov, float p_aspectRatio, float p_near, float p_far)
     {
+        matrix4x4 proj;
+
         float fovRads = DEGREES_TO_RADIANS(p_fov);
 
         // X and Y 
-        m[0][0] = p_aspectRatio / tanf(fovRads * 0.5f);
-        m[1][1] = 1.0f / tanf(fovRads * 0.5f);
+        proj.m[0][0] = p_aspectRatio / tanf(fovRads * 0.5f);
+        proj.m[1][1] = 1.0f / tanf(fovRads * 0.5f);
 
         // Z coordinates -1 near, +1 far
-        m[2][2] = (p_near + p_far) / (p_near - p_far);
-        m[3][2] = (2 * p_near * p_far) / (p_near - p_far);
+        proj.m[2][2] = (p_near + p_far) / (p_near - p_far);
+        proj.m[3][2] = (2 * p_near * p_far) / (p_near - p_far);
 
         // [x, y, z, -z] division becomes [-x/z -y/z -1] 
-        m[2][3] = -1.0f;
+        proj.m[2][3] = -1.0f;
 
         //the identity has it as 1.
-        m[3][3] = 0.0f;
+        proj.m[3][3] = 0.0f;
 
-        return *this;
+        return proj;
+    }
+
+    matrix4x4 matrix4x4::getProjectionOrthographic(float p_left, float p_right, float p_bottom, float p_top, float p_near, float p_far)
+    {
+        matrix4x4 ortho;
+
+        ortho.m[0][0] = 2.0f / (p_right - p_left   );
+        ortho.m[1][1] = 2.0f / (p_top   - p_bottom );
+        ortho.m[2][2] = 2.0f / (p_far   - p_near   );
+
+        ortho.m[3][0] = -(p_right + p_left  ) / (p_right - p_left   );
+        ortho.m[3][1] = -(p_top   + p_bottom) / (p_top   - p_bottom );
+        ortho.m[3][2] = -(p_far   + p_near  ) / (p_far   - p_near   );
+        ortho.m[3][3] = 1.0f;
+
+        return ortho;
     }
 
     void matrix4x4::createCameraView(const vector3 & p_position, const vector3 & p_view, const vector3 & p_upVector)
