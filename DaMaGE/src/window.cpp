@@ -94,6 +94,14 @@ namespace dmg { namespace graphics {
 
 	void Window::update()
 	{
+#ifdef _DEBUG
+        GLenum error = glGetError();
+        if (error != GL_NO_ERROR)
+        {
+            printf("OpenGL Error!! Code %d", error);
+        }
+#endif
+
 		glfwPollEvents();
 		glfwGetFramebufferSize(m_Window, &m_Width, &m_Height);
 		glViewport(0, 0, m_Width, m_Height);
