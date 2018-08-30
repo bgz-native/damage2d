@@ -21,14 +21,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\matrix4x4.h">
-      <Filter>math</Filter>
-    </ClInclude>
     <ClInclude Include="src\shader.h">
       <Filter>graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="src\vector.h">
-      <Filter>math</Filter>
     </ClInclude>
     <ClInclude Include="src\window.h">
       <Filter>graphics</Filter>
@@ -50,6 +44,18 @@
     </ClInclude>
     <ClInclude Include="src\file.h">
       <Filter>dmg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderable2D.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer2D.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DMGMath.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\simpleRenderer2D.h">
+      <Filter>graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +91,12 @@
     </ClCompile>
     <ClCompile Include="src\vector4.cpp">
       <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderable2D.cpp">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simpleRenderer2D.cpp">
+      <Filter>graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

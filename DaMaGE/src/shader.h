@@ -2,7 +2,7 @@
 #define _SHADER_H_
 
 #include "file.h"
-#include "matrix4x4.h"
+#include "DMGMath.h"
 #include <GL/glew.h>
 
 namespace dmg { namespace graphics {
@@ -29,8 +29,6 @@ namespace dmg { namespace graphics {
     private:
         GLuint load();
         GLint getUniformLocation(const GLchar* name);
-
-        GLuint getID() { return m_ShaderID; }
 
     private:
         GLuint m_ShaderID;

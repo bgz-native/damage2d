@@ -19,23 +19,27 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\renderer2D.h" />
     <ClInclude Include="src\indexbuffer.h" />
     <ClInclude Include="src\buffer.h" />
     <ClInclude Include="src\common.h" />
     <ClInclude Include="src\damage.h" />
     <ClInclude Include="src\file.h" />
-    <ClInclude Include="src\matrix4x4.h" />
+    <ClInclude Include="src\renderable2D.h" />
     <ClInclude Include="src\shader.h" />
-    <ClInclude Include="src\vector.h" />
+    <ClInclude Include="src\DMGMath.h" />
+    <ClInclude Include="src\simpleRenderer2D.h" />
     <ClInclude Include="src\window.h" />
     <ClInclude Include="src\vertexarray.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\simpleRenderer2D.cpp" />
     <ClCompile Include="src\indexbuffer.cpp" />
     <ClCompile Include="src\buffer.cpp" />
     <ClCompile Include="src\file.cpp" />
     <ClCompile Include="src\damage.cpp" />
     <ClCompile Include="src\matrix4x4.cpp" />
+    <ClCompile Include="src\renderable2D.cpp" />
     <ClCompile Include="src\shader.cpp" />
     <ClCompile Include="src\vector2.cpp" />
     <ClCompile Include="src\vector3.cpp" />
@@ -109,7 +113,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)dependencies\glfw-3.2.1\include;$(ProjectDir)dependencies\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLEW_STATIC;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

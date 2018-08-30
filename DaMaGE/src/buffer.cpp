@@ -21,6 +21,4 @@ namespace dmg { namespace graphics {
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
 
-
-
 } }
