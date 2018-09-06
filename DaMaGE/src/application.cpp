@@ -1,4 +1,4 @@
-#include "window.h"
+#include "application.h"
 
 namespace dmg { namespace graphics {
 	
@@ -10,25 +10,25 @@ namespace dmg { namespace graphics {
 
     void key_callback(GLFWwindow * window, int key, int scancode, int action, int mods)
     {
-        Window* thisWindow = (Window*)glfwGetWindowUserPointer(window);
+        Application* thisWindow = (Application*)glfwGetWindowUserPointer(window);
         thisWindow->m_Keys[key] = action != GLFW_RELEASE;
     }
 
     static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
     {
-        Window* thisWindow = (Window*)glfwGetWindowUserPointer(window);
+        Application* thisWindow = (Application*)glfwGetWindowUserPointer(window);
         thisWindow->m_MouseButtons[button] = action != GLFW_RELEASE;
     }
 
     static void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
     {
-        Window* thisWindow = (Window*)glfwGetWindowUserPointer(window);
+        Application* thisWindow = (Application*)glfwGetWindowUserPointer(window);
         thisWindow->mx = xpos;
         thisWindow->my = ypos;
     }
 
     // MAIN FUNCTIONS
-	Window::Window(const char* name, int width, int height)
+	Application::Application(const char* name, int width, int height)
 	{
 		m_Name = name;
 		m_Width = width;
@@ -51,12 +51,12 @@ namespace dmg { namespace graphics {
         }
 	}
 
-	Window::~Window()
+	Application::~Application()
 	{
 		glfwTerminate();
 	}
 
-	int Window::start()
+	int Application::start()
 	{
 		if (!glfwInit())
 		{
@@ -92,7 +92,7 @@ namespace dmg { namespace graphics {
 		return 0;
 	}
 
-	void Window::update()
+	void Application::update()
 	{
 #ifdef _DEBUG
         GLenum error = glGetError();
@@ -108,17 +108,17 @@ namespace dmg { namespace graphics {
 		glfwSwapBuffers(m_Window);
 	}
 
-	bool Window::isRunning() const
+	bool Application::isRunning() const
 	{
 		return (!glfwWindowShouldClose(m_Window));
 	}
 
-	void Window::clear() const
+	void Application::clear() const
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	}
 
-    bool Window::isKeyPressed(unsigned int keyCode) const
+    bool Application::isKeyPressed(unsigned int keyCode) const
     {
         if (keyCode >= MAX_KEYS)
         {
@@ -129,7 +129,7 @@ namespace dmg { namespace graphics {
         return m_Keys[keyCode];
     }
 
-    bool Window::isMouseButtonPressed(unsigned int mouseBtnCode) const
+    bool Application::isMouseButtonPressed(unsigned int mouseBtnCode) const
     {
         if (mouseBtnCode >= MAX_MOUSEBUTTONS)
         {
@@ -140,7 +140,7 @@ namespace dmg { namespace graphics {
         return m_MouseButtons[mouseBtnCode];
     }
 
-    void Window::getMousePosition(double & x, double & y) const
+    void Application::getMousePosition(double & x, double & y) const
     {
         x = mx;
         y = my;

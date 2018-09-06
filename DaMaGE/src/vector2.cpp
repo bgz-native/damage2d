@@ -1,4 +1,4 @@
-#include "DMGMath.h"
+#include "dmgmath.h"
 
 namespace dmg { namespace math {
 

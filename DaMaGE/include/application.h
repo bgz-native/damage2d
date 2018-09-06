@@ -1,23 +1,20 @@
-#ifndef _WINDOW_H_
-#define _WINDOW_H_
+#ifndef _APPLICATION_H_
+#define _APPLICATION_H_
 
-#include "common.h"
+#include "damage.h"
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#define DMG_ERROR -1
-
-#define MAX_KEYS 1024
-#define MAX_MOUSEBUTTONS 32
-
+#define MAX_KEYS            1024
+#define MAX_MOUSEBUTTONS    32
 
 namespace dmg { namespace graphics {
 
-	class Window
+	class Application
 	{
 	public:
-		Window(const char* name, int width, int height);
-		~Window();
+		Application(const char* name, int width, int height);
+		~Application();
 		void update();
 		bool isRunning() const;
 		void clear() const;
@@ -31,6 +28,8 @@ namespace dmg { namespace graphics {
 
 	private:
 		int start();
+
+        // TODO refactor this, remove friend callbacks
         friend static void key_callback(GLFWwindow * window, int key, int scancode, int action, int mods);
         friend static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
         friend static void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
@@ -52,4 +51,4 @@ namespace dmg { namespace graphics {
 } }
 
 
-#endif //_WINDOW_H_
+#endif //_APPLICATION_H_

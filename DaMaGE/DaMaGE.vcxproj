@@ -19,31 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\renderer2D.h" />
-    <ClInclude Include="src\indexbuffer.h" />
-    <ClInclude Include="src\buffer.h" />
-    <ClInclude Include="src\common.h" />
-    <ClInclude Include="src\damage.h" />
-    <ClInclude Include="src\file.h" />
-    <ClInclude Include="src\renderable2D.h" />
-    <ClInclude Include="src\shader.h" />
-    <ClInclude Include="src\DMGMath.h" />
-    <ClInclude Include="src\simpleRenderer2D.h" />
-    <ClInclude Include="src\window.h" />
-    <ClInclude Include="src\vertexarray.h" />
+    <ClInclude Include="include\renderer2D.h" />
+    <ClInclude Include="include\indexbuffer.h" />
+    <ClInclude Include="include\buffer.h" />
+    <ClInclude Include="include\damage.h" />
+    <ClInclude Include="include\file.h" />
+    <ClInclude Include="include\shader.h" />
+    <ClInclude Include="include\dmgmath.h" />
+    <ClInclude Include="include\application.h" />
+    <ClInclude Include="include\vertexarray.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\simpleRenderer2D.cpp" />
+    <ClCompile Include="src\renderer2D.cpp" />
     <ClCompile Include="src\indexbuffer.cpp" />
     <ClCompile Include="src\buffer.cpp" />
     <ClCompile Include="src\file.cpp" />
-    <ClCompile Include="src\damage.cpp" />
     <ClCompile Include="src\matrix4x4.cpp" />
-    <ClCompile Include="src\renderable2D.cpp" />
     <ClCompile Include="src\shader.cpp" />
     <ClCompile Include="src\vector2.cpp" />
     <ClCompile Include="src\vector3.cpp" />
-    <ClCompile Include="src\window.cpp" />
+    <ClCompile Include="src\application.cpp" />
     <ClCompile Include="src\vertexarray.cpp" />
     <ClCompile Include="src\vector4.cpp" />
   </ItemGroup>
@@ -59,7 +54,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -103,8 +98,9 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bin\$(Configuration)\Intermediates\</IntDir>
+    <OutDir>$(ProjectDir)lib\</OutDir>
+    <IntDir>$(ProjectDir)lib\obj\</IntDir>
+    <IncludePath>$(ProjectDir)include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -7,9 +7,6 @@
     <Filter Include="math">
       <UniqueIdentifier>{3933d040-656d-46e3-a7aa-a28527bb58b4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="audio">
-      <UniqueIdentifier>{ebc7bcd0-c4d7-4b0d-98a2-443a85b8aa29}</UniqueIdentifier>
-    </Filter>
     <Filter Include="dmg">
       <UniqueIdentifier>{8ddc9632-00aa-49f9-bb89-24931d39145a}</UniqueIdentifier>
     </Filter>
@@ -21,41 +18,32 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\shader.h">
-      <Filter>graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="src\window.h">
-      <Filter>graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="src\buffer.h">
+    <ClInclude Include="include\buffer.h">
       <Filter>buffers</Filter>
     </ClInclude>
-    <ClInclude Include="src\indexbuffer.h">
-      <Filter>buffers</Filter>
-    </ClInclude>
-    <ClInclude Include="src\vertexarray.h">
-      <Filter>buffers</Filter>
-    </ClInclude>
-    <ClInclude Include="src\common.h">
-      <Filter>dmg</Filter>
-    </ClInclude>
-    <ClInclude Include="src\damage.h">
-      <Filter>dmg</Filter>
-    </ClInclude>
-    <ClInclude Include="src\file.h">
-      <Filter>dmg</Filter>
-    </ClInclude>
-    <ClInclude Include="src\renderable2D.h">
-      <Filter>graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="src\renderer2D.h">
-      <Filter>graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="src\DMGMath.h">
+    <ClInclude Include="include\dmgmath.h">
       <Filter>math</Filter>
     </ClInclude>
-    <ClInclude Include="src\simpleRenderer2D.h">
+    <ClInclude Include="include\damage.h">
+      <Filter>dmg</Filter>
+    </ClInclude>
+    <ClInclude Include="include\file.h">
+      <Filter>dmg</Filter>
+    </ClInclude>
+    <ClInclude Include="include\renderer2D.h">
       <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\indexbuffer.h">
+      <Filter>buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shader.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vertexarray.h">
+      <Filter>buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\application.h">
+      <Filter>dmg</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -71,9 +59,6 @@
     <ClCompile Include="src\vector3.cpp">
       <Filter>math</Filter>
     </ClCompile>
-    <ClCompile Include="src\window.cpp">
-      <Filter>graphics</Filter>
-    </ClCompile>
     <ClCompile Include="src\buffer.cpp">
       <Filter>buffers</Filter>
     </ClCompile>
@@ -83,20 +68,17 @@
     <ClCompile Include="src\vertexarray.cpp">
       <Filter>buffers</Filter>
     </ClCompile>
-    <ClCompile Include="src\damage.cpp">
-      <Filter>dmg</Filter>
-    </ClCompile>
     <ClCompile Include="src\file.cpp">
       <Filter>dmg</Filter>
     </ClCompile>
     <ClCompile Include="src\vector4.cpp">
       <Filter>math</Filter>
     </ClCompile>
-    <ClCompile Include="src\renderable2D.cpp">
+    <ClCompile Include="src\renderer2D.cpp">
       <Filter>graphics</Filter>
     </ClCompile>
-    <ClCompile Include="src\simpleRenderer2D.cpp">
-      <Filter>graphics</Filter>
+    <ClCompile Include="src\application.cpp">
+      <Filter>dmg</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

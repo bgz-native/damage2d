@@ -76,7 +76,7 @@ namespace dmg { namespace math {
         vector4(float p_x, float p_y, float p_z, float p_a) : x(p_x), y(p_y), z(p_z), a(p_a) {}
         vector4(const vector4 &v) : x(v.x), y(v.y), z(v.z), a(v.a) {}
 
-        vector4     operator-() const; //negative
+        vector4     operator-() const;
 
         vector4     operator+(const vector4& v) const;
         vector4     operator-(const vector4& v) const;

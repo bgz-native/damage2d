@@ -32,7 +32,7 @@ namespace dmg { namespace graphics {
 
     void Shader::setUniform1i(const GLchar* name, int value)
     {
-        glUniform1f(getUniformLocation(name), value);
+        glUniform1i(getUniformLocation(name), value);
     }
 
     void Shader::setUniform2f(const GLchar* name, const DMG_VEC2& vector)

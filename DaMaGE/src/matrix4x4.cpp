@@ -1,4 +1,4 @@
-#include "DMGMath.h"
+#include "dmgmath.h"
 #include <cstring>
 
 #define DEGREES_TO_RADIANS(degrees)((M_PI * degrees)/180)
